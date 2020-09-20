@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MainMenuScript : CatCommunicator
 {
     private List<Button> buttonList = new List<Button>();
+    [SerializeField] Text success = default;
     private void Awake()
     {
         for(int i = 0; i<9; i++)
@@ -14,11 +15,13 @@ public class MainMenuScript : CatCommunicator
             b.interactable = false;
             buttonList.Add(b);
         }
+
     }
     // Start is called before the first frame update
     void Start()
     {
         int j = 1;
+        success.gameObject.SetActive(false);
         foreach (Button b in buttonList)
         {
             int l = j;
@@ -36,10 +39,11 @@ public class MainMenuScript : CatCommunicator
 
         buttonList[0].interactable = true;
         buttonList[8].GetComponentInChildren<Text>().text = "Bonus Level";
-        int n = PlayerPrefs.GetInt("level" + j);
+        int n = PlayerPrefs.GetInt("level" + 9);
         if (n != 0)
         {
             buttonList[8].GetComponentInChildren<Text>().text += "\n Best: " + n;
+            success.gameObject.SetActive(true);
         }
     }
     // Update is called once per frame

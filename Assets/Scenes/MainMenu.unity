@@ -1433,8 +1433,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360.2, y: -52.245}
-  m_SizeDelta: {x: 262.3235, y: 330.49}
+  m_AnchoredPosition: {x: 338, y: -52.245}
+  m_SizeDelta: {x: 279.46622, y: 330.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &994980038
 MonoBehaviour:
@@ -1469,9 +1469,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Soon it will be dark outside and there are an awful lot of helpless kittens
+  m_Text: 'Soon it will be dark outside and there are an awful lot of helpless kittens
     all over the place! Grab your skateboard and jump from wall to wall to bring
-    them to the safety of the cat of light!
+    them to the safety of the cat of light.
+
+
+    Left,Right/A,D to move
+
+    Space
+    to jump/walljump'
 --- !u!222 &994980039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1514,7 +1520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415.1, y: -274.2}
+  m_AnchoredPosition: {x: 316.95, y: -273}
   m_SizeDelta: {x: 175.82004, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018445427
@@ -1808,6 +1814,7 @@ RectTransform:
   - {fileID: 2120095258}
   - {fileID: 994980037}
   - {fileID: 1018445426}
+  - {fileID: 1640497942}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1844,6 +1851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33dd3a1bc51c49478a96201be0800d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  success: {fileID: 1640497943}
 --- !u!1 &1323931638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2253,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ea3fa18c543a4847ad3b6682d54c9cc, type: 3}
+--- !u!1 &1640497941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640497942}
+  - component: {fileID: 1640497944}
+  - component: {fileID: 1640497943}
+  m_Layer: 5
+  m_Name: SuccessText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1640497942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640497941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1291878342}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.7535, y: -249.6}
+  m_SizeDelta: {x: 380.49304, y: 43.13362}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1640497943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640497941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 436dca163b20540468d082581a89b9db, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Congrats! All kittens are safe :)
+--- !u!222 &1640497944
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640497941}
+  m_CullTransparentMesh: 0
 --- !u!1 &1696533121
 GameObject:
   m_ObjectHideFlags: 0
